@@ -57,17 +57,16 @@ while GameOn:
             GameOn = False
 
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_c]:
-        if keys[pygame.K_u]:
-            if keys[pygame.K_n]:
-                if keys[pygame.K_t]:
-                    portal()
+    if keys[pygame.K_i] and keys[pygame.K_c] and keys[pygame.K_y]:
+        portal()
 
-    if Ghost_x > width or Ghost_y > width:
+    if Ghost_x > width:
         Ghost_x = 900
+    if Ghost_y > width:
         Ghost_y = 700
-    if Ghost_x < 0 or Ghost_y < 0:
+    if Ghost_x < 0:
         Ghost_x = 0
+    if Ghost_y < 0:
         Ghost_y = 0
 
     if keys[pygame.K_a]:
